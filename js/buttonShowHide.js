@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    //slid1
+    $('#btnBackSearch').click(function(){
+        $('.cover-search-screen').slideUp(0);
+    })
+    $('#btnSearch').click(function(){
+        $('.cover-search-screen').slideDown(0);
+    })
+})
