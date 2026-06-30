@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Infinite Platform Runner</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="gameContainer">
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- ========================= -->
+    <!-- HUD -->
+    <!-- ========================= -->
+
+    <div id="hud">
+
+        <div class="hudItem">
+            <span>Score</span>
+            <strong id="score">0</strong>
+        </div>
+
+        <div class="hudItem">
+            <span>Best</span>
+            <strong id="bestScore">0</strong>
+        </div>
+
+        <div class="hudItem">
+            <span>Distance</span>
+            <strong id="distance">0m</strong>
+        </div>
+
+        <div class="hudItem">
+            <span>Speed</span>
+            <strong id="speed">1x</strong>
+        </div>
+
+        <div class="hudItem">
+            <span>Lives</span>
+            <strong id="lives">3</strong>
+        </div>
+
+        <div class="hudItem powerupHud">
+            <span>Power</span>
+            <strong id="powerupStatus">None</strong>
+        </div>
+
+        <div class="healthWrapper">
+
+            <div class="healthText">
+                Health
+            </div>
+
+            <div class="healthBar">
+
+                <div id="healthFill"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- START SCREEN -->
+    <!-- ========================= -->
+
+    <div id="startScreen" class="overlay">
+
+        <h1>INFINITE RUNNER</h1>
+
+        <p>
+            Run forever.<br>
+            Collect Khmer letters ក ខ គ.<br>
+            Grab hearts for extra lives.<br>
+            Use power-ups before the timer ends.<br>
+            Avoid spikes and enemies.
+        </p>
+
+        <button id="startBtn">
+            START GAME
+        </button>
+
+        <button id="newGameBtn" class="secondaryButton">
+            NEW GAME
+        </button>
+
+        <div class="controlsInfo">
+
+            <h3>Controls</h3>
+
+            <p>
+                Move : A / D or ← →
+            </p>
+
+            <p>
+                Jump : Space / ↑
+            </p>
+
+            <p>
+                Double Jump Supported
+            </p>
+
+            <p>
+                Pause : P
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- PAUSE -->
+    <!-- ========================= -->
+
+    <div id="pauseScreen" class="overlay hidden">
+
+        <h1>PAUSED</h1>
+
+        <button id="resumeBtn">
+            Resume
+        </button>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- GAME OVER -->
+    <!-- ========================= -->
+
+    <div id="gameOverScreen" class="overlay hidden">
+
+        <h1>GAME OVER</h1>
+
+        <h2 id="finalScore">
+            Score : 0
+        </h2>
+
+        <button id="restartBtn">
+
+            Play Again
+
+        </button>
+
+        <button id="newGameOverBtn" class="secondaryButton">
+
+            New Game
+
+        </button>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- MOBILE CONTROLS -->
+    <!-- ========================= -->
+
+    <div id="mobileControls">
+
+        <button
+            id="leftBtn"
+            class="mobileButton">
+
+            ◀
+
+        </button>
+
+        <button
+            id="jumpBtn"
+            class="mobileButton">
+
+            ▲
+
+        </button>
+
+        <button
+            id="rightBtn"
+            class="mobileButton">
+
+            ▶
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
